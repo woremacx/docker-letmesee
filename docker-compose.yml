@@ -1,0 +1,11 @@
+version: '2'
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - "./dict:/var/www/html/dict"
+      - "./letmesee.conf:/var/www/html/letmesee.conf"
+    ports:
+      - "10080:80"
+    tty: true
